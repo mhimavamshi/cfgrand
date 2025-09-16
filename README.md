@@ -51,7 +51,7 @@ a sneerers dodder the viewy rasper crudely daylong, grave, ajee, singly, slantly
 ```
 
 # Future
-[ ] Handle recursion depth and limit it
+- [ ] Handle recursion depth and limit it
 
 # Random Thoughts
 ## vague ideas, ignore safely
