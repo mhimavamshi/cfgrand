@@ -44,7 +44,7 @@ def extract_rules(file):
 
 def run_tests():
     # NOTE: for now
-    rules = extract_rules("productionrules.rulefile")
+    rules = extract_rules("test.rulefile")
     print(rules)
 
 if __name__ == "__main__":
