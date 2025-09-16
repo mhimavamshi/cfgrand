@@ -21,7 +21,7 @@ procedural style is followed
 ```
 3. verifies if each non-terminal has an expansion
 
-## program `generate_sentences.py`:
+### program `generate_sentences.py`:
 1. generates the sentence from symbol S
 2. randomly picks one substitution
 3. for each symbol in the RHS:
