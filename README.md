@@ -7,6 +7,26 @@ LHS -> RHS
 *LHS -> file.txt 
 ```
 
+The program `make_rules.py`:
+1. reads the .rulefile
+2. builds dictionary of rules for example:
+```
+"NP": [["Article", "Noun"]],
+"Noun": [["*dog"], ["*cat"], ...]
+```
+3. verifies if each non-terminal has an expansion
+
+The program `generate_sentences.py`:
+1. generates the sentence from symbol S
+2. randomly picks one substitution
+3. for each symbol in the RHS:
+    1. if it's a non-terminal -> recursively expand
+    2. if it's a terminal (for now, starts with `"*"`) -> pick one from file
+4. repeat until only terminals remain
+5. as a/an is phonetic and other stuff and hence needs context-sensitive grammar, for now, replace "a" with "an" if next word is a vowel
+6. repeats this for n sentences
+
+```
 run the program, for eg. using sample.rulefile and generating 10 sentences:
 ```
 $ python generate_sentences.py -r sample.rulefile -n 10
@@ -15,8 +35,7 @@ $ python generate_sentences.py -r sample.rulefile -n 10
 sample outputs:
 ```
 flawy shandy outbreeds a lexeme across a sunbows
-gamic baddies bobsleds a matchlocks
-the hagdons deny the buckwheat goldarn sometimes
+gamic baddies bobsleds a matchlockthe hagdons deny the buckwheat goldarn sometimes
 a breastpin exult nightlong
 a freeing crumpet discards the moochers onto the bletting
 haemal crosspiece sunder uncleansed smashing
@@ -115,5 +134,3 @@ an unraised fillets ruing
 an exits recoup goddamn hellish proudly
 the moldy pourer fathom a plangent frotteur despite a pardine timepiece
 ```
-
-
