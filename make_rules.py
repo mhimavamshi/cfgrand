@@ -19,15 +19,12 @@ def verify_rules(rule_dict):
     # interesting problem:
     # dict = {"a": ["b", "c", "d"], "b"}
     # for now anything with * is terminal, so don't need to check
-    all_rights = set()
     for left, rights in rule_dict.items():
         rights = set(itertools.chain.from_iterable(rights))
         for right in rights:
-            if right in all_rights: continue
             if not right.startswith("*") and right not in rule_dict:
                 print(f"{right} (non-)terminal doesn't exist.")
                 return False
-            all_rights.add(right)
     return True
 
 def read_file(filename):
