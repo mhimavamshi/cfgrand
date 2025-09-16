@@ -10,7 +10,9 @@ LHS -> RHS
 *LHS -> file.txt 
 ```
 ## Program flow
-The program `make_rules.py`:
+procedural style is followed
+
+### program `make_rules.py`:
 1. reads the .rulefile
 2. builds dictionary of rules for example:
 ```
@@ -19,7 +21,7 @@ The program `make_rules.py`:
 ```
 3. verifies if each non-terminal has an expansion
 
-The program `generate_sentences.py`:
+## program `generate_sentences.py`:
 1. generates the sentence from symbol S
 2. randomly picks one substitution
 3. for each symbol in the RHS:
