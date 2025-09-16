@@ -28,7 +28,10 @@ procedural style is followed
     1. if it's a non-terminal -> recursively expand
     2. if it's a terminal (for now, starts with `"*"`) -> pick one from file
 4. repeat until only terminals remain
-5. as a/an is phonetic and other stuff and hence needs context-sensitive grammar, for now, replace "a" with "an" if next word is a vowel
+5. post process the sentence:
+    1. as a/an is phonetic and other stuff and hence needs context-sensitive grammar, for now, replace "a" with "an" if next word is a vowel
+    2. format the commas properly
+    3. add a period to end of sentence
 6. repeats this for n sentences
 
 # Usage
