@@ -55,5 +55,6 @@ a sneerers dodder the viewy rasper crudely daylong, grave, ajee, singly, slantly
 
 # Random Thoughts
 ## vague ideas, ignore safely
+- basically "Colorless green ideas sleep furiously" like sentences generator
 - what if we could generate random sentences, train a ML model for eg. contrastive learning to see if semantically meaningful (trained on books etc.,) or not, and then just let it run? 
 - or, the other way around, use a grammar to restrict tokens in the first place and train the model for semanticity and also grammar? then generate a response statement from a 'semantic vector' 
