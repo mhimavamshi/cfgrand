@@ -52,6 +52,7 @@ a sneerers dodder the viewy rasper crudely daylong, grave, ajee, singly, slantly
 
 # Future
 - [ ] Handle recursion depth and limit it
+- [ ] Handle parsing errors in a better way (future; not a matter of knowledge/figuring out but saving development time)
 
 # Random Thoughts
 ## vague ideas, ignore safely
