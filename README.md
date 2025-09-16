@@ -1,5 +1,6 @@
 # Working
 
+## Rulefile Format
 CFGs are defined in .rulefile:
 ```
 LHS -> RHS
@@ -8,7 +9,7 @@ LHS -> RHS
 # for now only terminals
 *LHS -> file.txt 
 ```
-
+## Program flow
 The program `make_rules.py`:
 1. reads the .rulefile
 2. builds dictionary of rules for example:
