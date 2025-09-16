@@ -41,6 +41,7 @@ def main():
     parser = argparse.ArgumentParser(description="Generate random sentences from a defined Context-Free Grammar.")
     parser.add_argument("-r", "--rules", type=str, required=True, help="rulesfile that contains the grammar")
     parser.add_argument("-n", "--number", type=int, required=True, help="number of sentences to generate")
+    parser.add_argument("-a", "--attempts", type=int, default=1, help="number of times to look for unique sentences")
 
     args = parser.parse_args()
 
@@ -50,8 +51,10 @@ def main():
 
     for _ in range(args.number):
         sentence = generate_full_sentence(rules)
-        while sentence in sentences:
+        attempts = 0
+        while sentence in sentences and attempts < args.attempts:
             sentence = generate_full_sentence(rules)
+            attempts += 1
         sentences.add(sentence)
         print(sentence)
 
