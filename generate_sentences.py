@@ -30,9 +30,13 @@ def post_process(words):
             words[i] = "an"
     return words
 
-def main():
-    global sentence
+def generate_full_sentence(rules):
+    words = generate_sentence(rules)
+    words = post_process(words)
+    sentence = " ".join(words)
+    return sentence
     
+def main():
 
     parser = argparse.ArgumentParser(description="Generate random sentences from a defined Context-Free Grammar.")
     parser.add_argument("-r", "--rules", type=str, required=True, help="rulesfile that contains the grammar")
@@ -42,11 +46,15 @@ def main():
 
     rules = extract_rules(args.rules)
 
+    sentences = set()
+
     for _ in range(args.number):
-        words = generate_sentence(rules)
-        words = post_process(words)
-        print(" ".join(words))
-    
+        sentence = generate_full_sentence(rules)
+        while sentence in sentences:
+            sentence = generate_full_sentence(rules)
+        sentences.add(sentence)
+        print(sentence)
+
 
 if __name__ == "__main__":
     main()
