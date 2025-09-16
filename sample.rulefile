@@ -29,9 +29,9 @@ PP -> PP Comma PP
 
 
 # Terminals
-*Verb -> verbs.txt
-*Article -> articles.txt
-*Noun -> nouns.txt
-*Adj -> adjectives.txt
-*Adverb -> adverbs.txt
-*Prep -> preps.txt
+*Verb -> ./words/verbs.txt
+*Article -> ./words/articles.txt
+*Noun -> ./words/nouns.txt
+*Adj -> ./words/adjectives.txt
+*Adverb -> ./words/adverbs.txt
+*Prep -> ./words/preps.txt
