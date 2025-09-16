@@ -21,18 +21,32 @@ def generate_sentence(rules, start="S", depth=0):
 
     return result
 
-def post_process(words):
+def check_vowels(words):
     # NOTE: hack around context sensitive grammar
     # of course doesnt consider phonetics
     vowels = {"a", "e", "i", "o", "u"}
     for i in range(len(words)-1):
         if words[i].lower() == "a" and words[i+1][0] in vowels:
             words[i] = "an"
-    return words
+
+def format_commas(words):
+    for i in range(len(words)-1):
+        if words[i+1] == ",":
+            words[i] += ","
+    words[:] = [word for word in words if word != ","]
+
+
+def add_period(words):
+    words[-1] += "."
+
+def post_process(words):
+    check_vowels(words)
+    add_period(words)
+    format_commas(words)
 
 def generate_full_sentence(rules):
     words = generate_sentence(rules)
-    words = post_process(words)
+    post_process(words)
     sentence = " ".join(words)
     return sentence
     
