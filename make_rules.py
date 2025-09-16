@@ -16,9 +16,7 @@ def build_program_rules(rules, seperation=" -> ", delimiter=" ", file_sign="*"):
 
 def verify_rules(rule_dict):
     # NOTE: for now
-    # interesting problem:
-    # dict = {"a": ["b", "c", "d"], "b"}
-    # for now anything with * is terminal, so don't need to check
+    # anything with * is terminal, so don't need to check
     for left, rights in rule_dict.items():
         rights = set(itertools.chain.from_iterable(rights))
         for right in rights:
