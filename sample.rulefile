@@ -21,6 +21,13 @@ PP -> Prep NP
 AdvP -> Adverb
 AdvP -> Adverb Adverb
 
+# Commas
+Comma -> *,
+VP -> VP Comma VP
+AdvP -> AdvP Comma AdvP
+PP -> PP Comma PP
+
+
 # Terminals
 *Verb -> verbs.txt
 *Article -> articles.txt
