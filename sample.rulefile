@@ -1,0 +1,30 @@
+# Sentence structure
+S -> NP VP
+S -> NP VP AdvP
+S -> NP VP PP
+
+# Noun Phrase
+NP -> Article Noun
+NP -> Article Adj Noun
+NP -> Adj Noun
+
+# Verb Phrase
+VP -> Verb
+VP -> Verb NP
+VP -> Verb NP PP
+VP -> Verb AdvP
+
+# Prepositional Phrase
+PP -> Prep NP
+
+# Adverbial Phrase
+AdvP -> Adverb
+AdvP -> Adverb Adverb
+
+# Terminals
+*Verb -> verbs.txt
+*Article -> articles.txt
+*Noun -> nouns.txt
+*Adj -> adjectives.txt
+*Adverb -> adverbs.txt
+*Prep -> preps.txt
