@@ -1,3 +1,5 @@
+# Working
+
 CFGs are defined in .rulefile:
 ```
 LHS -> RHS
@@ -26,7 +28,8 @@ The program `generate_sentences.py`:
 5. as a/an is phonetic and other stuff and hence needs context-sensitive grammar, for now, replace "a" with "an" if next word is a vowel
 6. repeats this for n sentences
 
-```
+# Usage
+
 run the program, for eg. using sample.rulefile and generating 10 sentences:
 ```
 $ python generate_sentences.py -r sample.rulefile -n 10
