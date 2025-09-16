@@ -50,6 +50,9 @@ senseless rivals tottings forthwith around lossy biomes, underneath a sulcate ea
 a sneerers dodder the viewy rasper crudely daylong, grave, ajee, singly, slantly, hereby.
 ```
 
+# Future
+[] Handle recursion depth and limit it
+
 # Random Thoughts
 ## vague ideas, ignore safely
 - what if we could generate random sentences, train a ML model for eg. contrastive learning to see if semantically meaningful (trained on books etc.,) or not, and then just let it run? 
