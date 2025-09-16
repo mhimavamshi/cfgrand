@@ -3,6 +3,7 @@ CFGs are defined in .rulefile:
 LHS -> RHS
 # comment
 # expands the words in lines as unique substitutions
+# for now only terminals
 *LHS -> file.txt 
 ```
 
